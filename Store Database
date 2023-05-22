@@ -1,0 +1,10 @@
+Create Store Data Base
+
+CREATE TABLE Rock_Shop (Id INTEGER PRIMARY KEY,Item TEXT,Quantity INTEGER,Price NUMERIC,Amount_Sold INTEGER);
+INSERT INTO  Rock_Shop VALUES (1,"Ethiopian Opal",3,22,1), (2,"Hematoid Quarts",1,24,3), (3,"Amethyst Mini Point",10,5,8),(4,"Charoite Freeform",2,53,1),(5,"Ocean Jasper Heart",15,14,10),(6,"Sunstone",20,6,10),(7,"Rainbow MoonStone",10,5,15),(8,"Red Jasper",10,3,8),(9,"Danburite Cluster",20,45,11),(10,"Blue Opal Tumbled",13,3,10),(11,"Grape Agate Cluster",30,18,20),(12,"Lepidolite Rough Piece",25,4,18),(13,"Pink Baryte Cluster",8,40,16),(14,"Thousand Layer Quartz Point",27,6,21),(15,"Agate Mini Geo",25,4,20);
+
+--display the database ordered by price.
+SELECT * FROM Rock_Shop ORDER BY Price DESC;
+
+--display the item that sold the most.
+SELECT Item, MAX(Amount_Sold) FROM Rock_Shop
